@@ -33,7 +33,7 @@ gulp.task('fonts', () => {
 });
 
 gulp.task('images', () => {
-  return gulp.src('src/images/**/*.{png,jpg,jpeg,gif,ico}')
+  return gulp.src('src/**/*.{png,jpg,jpeg,gif,ico}')
     .pipe(plumber())
     .pipe(gulp.dest('public/images'))
     .pipe(browserSync.stream());

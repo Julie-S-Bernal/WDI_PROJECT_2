@@ -4,7 +4,19 @@ const registrationsController = require('../controllers/registrations');
 const teasController = require('../controllers/teas');
 const secureRoute = require('../lib/secureRoute');
 
-router.get('/', (req, res) => res.render('statics/index'));
+
+router.get('/', (req, res) => res.render('teas/index'));
+
+router.route('/login')
+  .get(sessionsController.new)
+  .post(sessionsController.create);
+
+router.route('/logout')
+  .get(sessionsController.delete);
+
+router.route('/register')
+  .get(registrationsController.new)
+  .post(registrationsController.create);
 
 router.route('/teas')
   .get(teasController.index)
@@ -21,23 +33,15 @@ router.route('/teas/:id')
 router.route('/teas/:id/edit')
   .get(secureRoute, teasController.edit);
 
-router.route('/register')
-  .get(registrationsController.new)
-  .post(registrationsController.create);
-
-router.route('/login')
-  .get(sessionsController.new)
-  .post(sessionsController.create);
-
-router.route('/logout')
-  .get(sessionsController.delete);
-
-
 router.route('/teas/:id/comments')
   .post(secureRoute, teasController.createComment);
 
 router.route('/teas/:id/comments/:commentId')
   .delete(secureRoute, teasController.deleteComment);
+
+router.get('/favicon.ico', function(req, res) {
+  return res.status(204);
+});
 
 router.all('*', (req, res) => res.notFound());
 

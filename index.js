@@ -11,8 +11,9 @@ const customResponses = require('./lib/customResponses');
 const authentication = require('./lib/authentication');
 const errorHandler = require('./lib/errorHandler');
 
+
 const app = express();
-const { port, dbUri, sessionSecret } = require('./config/environment');
+const { port, dbUri, sessionSecret, env } = require('./config/environment');
 
 mongoose.Promise = require('bluebird');
 mongoose.connect(dbUri, { useMongoClient: true });
@@ -22,19 +23,8 @@ app.set('views', `${__dirname}/views`);
 
 app.use(expressLayouts);
 app.use(express.static(`${__dirname}/public`));
-// if('test' !== env) app.use(morgan('dev'));
-
-app.use(session({
-  secret: sessionSecret,
-  resave: false,
-  saveUninitialized: false
-}));
-
-app.use(flash());
-
-app.use(customResponses);
+if('test' !== env) app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({ extended: true }));
-
 app.use(methodOverride(function (req) {
   if (req.body && typeof req.body === 'object' && '_method' in req.body) {
     const method = req.body._method;
@@ -42,8 +32,15 @@ app.use(methodOverride(function (req) {
     return method;
   }
 }));
+app.use(session({
+  secret: sessionSecret,
+  resave: false,
+  saveUninitialized: false
+}));
+app.use(flash());
+app.use(customResponses);
 app.use(authentication);
-app.use(routes);
 app.use(errorHandler);
+app.use(routes);
 //
 app.listen(port, () => console.log(`Express is listening on port ${port}`));

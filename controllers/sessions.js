@@ -4,20 +4,22 @@ function sessionsNew(req, res) {
   res.render('sessions/new');
 }
 
-function sessionsCreate(req, res, next) {
+function sessionsCreate(req, res, next ) {
   User
     .findOne({ email: req.body.email })
+    .exec()
     .then((user) => {
-      if(!user || !user.validatePassword(req.body.password)) {
+      if (!user || !user.validatePassword(req.body.password)) {
         req.flash('danger', 'Unknown email/password combination');
-        return res.redirect('/login');
+        return res.render('sessions/new');
       }
 
       req.session.userId = user.id;
-      req.session.isAuthenticated = true;
+      req.session.isLoggedIn = true;
+      req.user = user;
 
       req.flash('success', `Welcome back, ${user.username}!`);
-      res.redirect('/');
+      return res.redirect('/teas');
     })
     .catch(next);
 }
