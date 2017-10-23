@@ -2,10 +2,11 @@ const router = require('express').Router();
 const sessionsController = require('../controllers/sessions');
 const registrationsController = require('../controllers/registrations');
 const teasController = require('../controllers/teas');
+const usersController = require('../controllers/users');
 const secureRoute = require('../lib/secureRoute');
 
 
-router.get('/', (req, res) => res.render('teas/index'));
+router.get('/', (req, res) => res.redirect('/teas'));
 
 router.route('/login')
   .get(sessionsController.new)
@@ -39,8 +40,11 @@ router.route('/teas/:id/comments')
 router.route('/teas/:id/comments/:commentId')
   .delete(secureRoute, teasController.deleteComment);
 
+router.route('/users/:id/edit')
+  .get(usersController.edit);
+
 router.get('/favicon.ico', function(req, res) {
-  return res.status(204);
+  res.status(204);
 });
 
 router.all('*', (req, res) => res.notFound());

@@ -1,1 +1,41 @@
-<h1>Edit</h1>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+  <input type="hidden" name="_method" value="PUT">
+      <form method="POST" action="/teas/<%= tea.id %>">
+        <div class="form-group">
+          <label for="teatype">Tea type</label>
+          <input type="text" name="teatype" id="teatype" required minlength="2" value="<%= tea.teatype %>" required>
+        </div>
+        <div class="form-group">
+          <label for="region">Region</label>
+          <input type="text" name="region" id="region" required minlength="2"value="<%= tea.region %>" required>
+        </div>
+        <div class="form-group">
+          <label for="description">Description</label>
+          <input type="text" name="description" id="description" required value="<%= hotel.description %>" required>
+        </div>
+        <div class="form-group">
+          <label for="teaquality">Tea quality</label>
+          <input type="teaquality" name="teaquality" id="teaquality" required
+          value="<%= tea.teaquality%>" required>
+        </div>
+        <div class="form-group">
+          <label for="mood">What mood is this tea for?</label>
+          <input type="text" name="mood" id="mood" required
+          value="<%= tea.mood %>" required>
+        </div>
+        <div class="form-group">
+          <label for="image">Image</label>
+          <input type="text" name="image" id="image" required
+          value="<%= tea.image %>" required>
+        </div>
+      <a href="teas/index"><button type="submit" class="btn btn-primary">Submit</button></a>
+      </form>
+<button class="button">Update Comment</button>
+  </body>
+</html>

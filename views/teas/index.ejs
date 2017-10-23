@@ -1,1 +1,19 @@
-<h1>Index</h1>
+<% teas.forEach((tea) => { %>
+  <div class="large-4 columns">
+    <a href="/teas/<%= tea.id %>">
+      <img class="thumbnail" src="<%= tea.image %>" alt="<%= tea.teatype %>">
+      <h2><%= tea.teatype %></h2>
+      <p>
+        <%= tea.region %><br>
+        <%= tea.description %><br>
+        <%= tea.teaquality %><br>
+        <%= tea.mood %><br>
+        <%= tea.country %><br>
+        <%= tea.image %><br>
+      </p>
+      <p>
+        <%= tea.createdBy.username %>
+      </p>
+    </a>
+  </div>
+<% }) %>

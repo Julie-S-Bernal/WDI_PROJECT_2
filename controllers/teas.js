@@ -1,6 +1,5 @@
 const Tea = require('../models/tea');
 
-
 function indexRoute(req, res, next) {
   Tea
     .find()
@@ -110,9 +109,8 @@ function deleteCommentRoute(req, res, next) {
       if(!tea) return res.notFound();
       // get the embedded record by it's id
       const comment = tea.comments.id(req.params.commentId);
-      if(!tea.belongsTo(req.user)) return res.unauthorized(`/teas/${tea.id}`, 'You do not have permission to edit that resource');
+      if(!comment.belongsTo(req.user)) return res.unauthorized(`/teas/${tea.id}`, 'You do not have permission to edit that resource');
       comment.remove();
-
       return tea.save();
     })
     .then((tea) => res.redirect(`/teas/${tea.id}`))

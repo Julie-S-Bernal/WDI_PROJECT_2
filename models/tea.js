@@ -13,17 +13,13 @@ commentSchema.methods.belongsTo = function belongsTo(user) {
 };
 
 const teaSchema = new mongoose.Schema({
-  name: String,
-  address: {
-    line1: { type: String, required: true },
-    line2: String,
-    city: { type: String, required: true },
-    postcode: { type: String, required: true },
-    country: { type: String, required: true }
-
-  },
+  teatype: String,
+  region: String,
+  description: { type: String, required: true},
+  teaquality: {type: String, required: true},
+  mood: String,
   image: { type: String, required: true },
-  stars: { type: Number, required: true },
+  // stars: { type: Number, required: true },
   createdBy: { type: mongoose.Schema.ObjectId, ref: 'User', required: true },
   comments: [ commentSchema ]
 });
@@ -33,4 +29,4 @@ teaSchema.methods.belongsTo = function belongsTo(user) {
   return user.id === this.createdBy.toString();
 };
 
-module.exports = mongoose.model('tea', teaSchema);
+module.exports = mongoose.model('Tea', teaSchema);

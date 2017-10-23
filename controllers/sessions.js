@@ -15,8 +15,6 @@ function sessionsCreate(req, res, next ) {
       }
 
       req.session.userId = user.id;
-      req.session.isLoggedIn = true;
-      req.user = user;
 
       req.flash('success', `Welcome back, ${user.username}!`);
       return res.redirect('/teas');
