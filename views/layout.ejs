@@ -5,19 +5,17 @@
   <meta charset="utf-8">
   <title>RESTful App</title>
     <% include ./partials/_stylesheet %>
-
+    <% include ./partials/_scripts.ejs %>
 </head>
-<body>
+<body <% if (locals.page) { %>class="<%= locals.page %>" <% } %>>
   <% include ./partials/_navbar %>
   <% for(const type in messages) { %>
-    <div class="callout <%= type %>">
-      <h5><%= messages[type] %></h5>
+    <div class="alert alert-info" role="alert">
+      <strong><%= messages[type] %></strong>
     </div>
   <% } %>
-  <main class="row">
+  <div class="container">
     <%- body %>
-  </main>
-
-  <% include ./partials/_scripts.ejs %>
+  </div>
 </body>
 </html>

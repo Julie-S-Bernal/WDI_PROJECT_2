@@ -1,38 +1,29 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-
-      <form method="POST" action="/teas">
-        <div class="form-group">
-          <label for="teatype">Tea type</label>
-          <input type="text" name="teatype" id="teatype" required minlength="2">
-        </div>
-        <div class="form-group">
-          <label for="region">Region</label>
-          <input type="text" name="region" id="region" required minlength="2">
-        </div>
-        <div class="form-group">
-          <label for="description">Description</label>
-          <input type="text" name="description" id="description" required>
-        </div>
-        <div class="form-group">
-          <label for="teaquality">Tea quality</label>
-          <input type="teaquality" name="teaquality" id="teaquality" required>
-        </div>
-        <div class="form-group">
-          <label for="mood">What mood is this tea for?</label>
-          <input type="text" name="mood" id="mood" required>
-        </div>
-        <div class="form-group">
-          <label for="image">Image</label>
-          <input type="text" name="image" id="image" required>
-        </div>
-      <a href="teas/index"><button type="submit" class="btn btn-primary">Submit</button></a>
-      </form>
-
-  </body>
-</html>
+<div class="row">
+  <form method="POST" action="/teas">
+    <div class="form-group">
+      <label for="teatype"><h4>Tea type</h4></label>
+      <input type="text" name="teatype" id="teatype" required minlength="2">
+    </div>
+    <div class="form-group">
+      <label for="region"><h4>Region</h4></label>
+      <input type="text" name="region" id="region" required minlength="2">
+    </div>
+    <div class="form-group">
+      <label for="description"><h4>Description</h4></label>
+      <input type="text" name="description" id="description" required>
+    </div>
+    <div class="form-group">
+      <label for="teaquality"><h4>Tea quality</h4></label>
+      <input type="teaquality" name="teaquality" id="teaquality" required>
+    </div>
+    <div class="form-group">
+      <label for="mood"><h4>What mood is this tea for?</h4></label>
+      <input type="text" name="mood" id="mood" required>
+    </div>
+    <div class="form-group">
+      <label for="image"><h4>Image</h4></label>
+      <input type="text" name="image" id="image" required>
+    </div>
+  <a href="teas/index"><button type="submit" class="btn btn-primary"><h4>Submit</h4></button></a>
+  </form>
+</div>

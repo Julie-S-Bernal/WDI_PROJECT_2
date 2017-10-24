@@ -1,37 +1,75 @@
 
-*{
+* {
   font-family: 'Abril Fatface', cursive;
+  font-family: 'Libre Baskerville', serif;
 }
 
+
 body {
-  font-family: 'Abril Fatface', cursive;
-  background-color: #333333;
   text-decoration: none;
-  margin: 25px;
+  // margin: 25px;
+  color: white;
+
 }
 
 div.navstyle{
-text-align: center;
-list-style: none;
-
-}
-ul.nav-bar a.nav-link{
-  text-decoration: none;
-
-}
-img.img-thumbnail{
-
-  width: 250px;
-  height:500px;
+  text-align: center;
+  list-style: none;
 }
 
-.background-register{
+nav{
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  margin-bottom: 30px;
+}
 
- background-image: url(images/login-photo.jpg);
+
+a.nav-link{
+  text-align: center;
+  margin:5px  70px 5px 70px;
 
 }
+div.login-image{
+
+ background-image: url(../src/images/login-photo.jpg);
+ background-image: cover;
+ background-repeat: no-repeat;
+ height: 100vh;
+
+}
+
+
+.all-element-nav{
+
+  margin: 5px 400px;
+
+}
+
+img {
+  height:auto;
+  max-width: 100%;
+}
+
+body {
+  &.register, &.login {
+    background-image: url(../images/login-photo.jpg);
+    background-position: center top;
+    background-size: cover;
+    .navbar-light .navbar-nav .nav-link {
+      color: white;
+    }
+    form {
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 30px;
+      color: white;
+      button {
+        width: 100%;
+      }
+    }
+  }
+}
+
 .background-form-register{
 background-color: 0, 0, 0, 0.8,
-
 
 }
