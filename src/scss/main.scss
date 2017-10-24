@@ -1,3 +1,37 @@
+
+*{
+  font-family: 'Abril Fatface', cursive;
+}
+
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Abril Fatface', cursive;
+  background-color: #333333;
+  text-decoration: none;
+  margin: 25px;
+}
+
+div.navstyle{
+text-align: center;
+list-style: none;
+
+}
+ul.nav-bar a.nav-link{
+  text-decoration: none;
+
+}
+img.img-thumbnail{
+
+  width: 250px;
+  height:500px;
+}
+
+.background-register{
+
+ background-image: url(images/login-photo.jpg);
+
+}
+.background-form-register{
+background-color: 0, 0, 0, 0.8,
+
+
 }

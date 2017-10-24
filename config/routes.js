@@ -6,7 +6,7 @@ const usersController = require('../controllers/users');
 const secureRoute = require('../lib/secureRoute');
 
 
-router.get('/', (req, res) => res.redirect('/teas'));
+router.get('/', (req, res) => res.render('homepage'));
 
 router.route('/login')
   .get(sessionsController.new)
@@ -34,14 +34,22 @@ router.route('/teas/:id')
 router.route('/teas/:id/edit')
   .get(secureRoute, teasController.edit);
 
+
+// authentification not workin stuff
+router.route('/users/:id/edit')
+  .get(usersController.edit);
+//
+router.route('users/:id')
+  .put(usersController.update);
+
+
 router.route('/teas/:id/comments')
   .post(secureRoute, teasController.createComment);
 
 router.route('/teas/:id/comments/:commentId')
   .delete(secureRoute, teasController.deleteComment);
 
-router.route('/users/:id/edit')
-  .get(usersController.edit);
+
 
 router.get('/favicon.ico', function(req, res) {
   res.status(204);

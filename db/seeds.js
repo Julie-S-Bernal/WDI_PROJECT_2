@@ -38,6 +38,22 @@ User
         mood: 'spicy',
         image: 'http://www.tching.com/corpus/files/9292ab68-ea91-4aa6-ab97-4e608acd1430/plucking-at-hile-3.jpg',
         createdBy: users[0]
+      },{
+        teatype: 'Genmaicha',
+        region: 'Shizuoka, Japan',
+        description: 'I like my Genmaicha and I heard that the Kumamoto Prefecture teas are very delicate Any recommendations of teas I could get from this area? Sensha is fine too.',
+        teaquality: 'Organic, Lose-leaf',
+        mood: 'subtle, sweet',
+        image: 'images/japan.jpeg',
+        createdBy: users[0]
+      },{
+        teatype: 'Kukicha',
+        region: 'Shizuoka, Japan',
+        description: 'I like my Genmaicha and I heard that the Kumamoto Prefecture teas are very delicate Any recommendations of teas I could get from this area? Sensha is fine too.',
+        teaquality: 'Organic, Lose-leaf',
+        mood: 'Anything',
+        image: 'images/japan.jpeg',
+        createdBy: users[0]
       }]);
   })
 
