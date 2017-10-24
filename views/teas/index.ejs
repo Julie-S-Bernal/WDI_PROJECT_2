@@ -8,22 +8,24 @@
   <div class="col-4">
     <a href="/teas/new" class="btn btn-primary">Add Tea</a>
   </div>
-<% teas.forEach((tea) => { %>
-  <div class="col-md-4">
-
-      <img class="img-thumbnail btn-outline-dark" src="<%= tea.image %>" alt="<%= tea.teatype %>">
-      <a href="/teas/<%= tea.id %>"> <h2><%= tea.teatype %></h2> </a>
-      <p>
-        <%= tea.region %><br>
-        <%= tea.description %><br>
-        <%= tea.teaquality %><br>
-        <%= tea.mood %><br>
-        <%= tea.country %><br>
-      </p>
-      <p>
-        <%= tea.createdBy.username %>
-      </p>
-    </a>
-  </div>
- <% }) %>
 </div>
+<ul class="row">
+  <% teas.forEach((tea) => { %>
+    <li class="col-md-4">
+
+    <img class="img-thumbnail btn-outline-dark" src="<%= tea.image %>" alt="<%= tea.teatype %>">
+    <a href="/teas/<%= tea.id %>"> <h2><%= tea.teatype %></h2> </a>
+    <p>
+    <%= tea.region %><br>
+    <%= tea.description %><br>
+    <%= tea.teaquality %><br>
+    <%= tea.mood %><br>
+    <%= tea.country %><br>
+    </p>
+    <p>
+    <%= tea.createdBy.username %>
+    </p>
+    </a>
+    </li>
+    <% }) %>
+  </ul>
