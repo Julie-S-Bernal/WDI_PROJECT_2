@@ -5,12 +5,12 @@ function indexRoute(req, res, next) {
     .find()
     .populate('createdBy')
     .exec()
-    .then((teas) => res.render('teas/index', { teas }))
+    .then((teas) => res.render('teas/index', { teas, page: 'index' }))
     .catch(next);
 }
 
 function newRoute(req, res) {
-  return res.render('teas/new');
+  return res.render('teas/new',{ page: 'teas' });
 }
 
 function createRoute(req, res, next) {
@@ -33,7 +33,7 @@ function showRoute(req, res, next) {
     .exec()
     .then((tea) => {
       if(!tea) return res.notFound();
-      return res.render('teas/show', { tea });
+      return res.render('teas/show', { tea, page: 'post' });
     })
     .catch(next);
 }

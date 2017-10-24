@@ -18,6 +18,22 @@ User
     email: 'mike.hayden@ga.co',
     password: 'password',
     passwordConfirmation: 'password'
+},{
+  firstName: 'Sarah',
+  lastName: 'Alpay',
+  username: 'Sarahal',
+  email: 'sarah.alpay@ga.co',
+  password: 'password',
+  passwordConfirmation: 'password'
+
+},{
+  firstName: 'Julie',
+  lastName: 'Bernal',
+  username: 'juliebe',
+  email: 'julie.bernal@ga.co',
+  password: 'password',
+  passwordConfirmation: 'password'
+
   }])
   .then((users) => {
     console.log(`${users.length} users created`);
@@ -37,15 +53,15 @@ User
         teaquality: 'Premium, Lose-leaf',
         mood: 'Spicy',
         image: 'http://www.tching.com/corpus/files/9292ab68-ea91-4aa6-ab97-4e608acd1430/plucking-at-hile-3.jpg',
-        createdBy: users[0]
+        createdBy: users[1]
       },{
         teatype: 'Genmaicha',
         region: 'Shizuoka, Japan',
         description: 'I like my Genmaicha and I heard that the Kumamoto Prefecture teas are very delicate Any recommendations of teas I could get from this area? Sensha is fine too.',
         teaquality: 'Organic, Lose-leaf',
         mood: 'Subtle, sweet',
-        image: 'images/japan.jpeg',
-        createdBy: users[0]
+        image: '../images/japan.jpeg',
+        createdBy: users[2]
       },{
         teatype: 'Kukicha',
         region: 'Shizuoka, Japan',
@@ -53,7 +69,24 @@ User
         teaquality: 'Organic',
         mood: 'Energize',
         image: 'images/kukicha.jpeg',
+        createdBy: users[2]
+
+      },{
+        teatype: 'Lapsang souchong',
+        region: 'Fujian, China',
+        description: 'I usually drink black tea but I heard that this chinese tea is really good, anyone mind to point me in the right direction?',
+        teaquality: 'Anything',
+        mood: 'calm',
+        image: '../images/china.jpeg',
         createdBy: users[0]
+      },{
+        teatype: 'Anything',
+        region: 'anywhere',
+        description: 'I am looking for a smookey tea that is good for winter. A blend would be good, maybe with cinnamon?',
+        teaquality: 'Lose-leaf',
+        mood: 'autumn',
+        image: '../images/last.jpeg',
+        createdBy: users[1]
       }]);
   })
 

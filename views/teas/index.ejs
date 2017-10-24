@@ -2,7 +2,7 @@
   <div class="col-8">
     <h1>Welcome to Tea Mood</h1>
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      Hi tealover.We know picking a tea is not easy, what type, what country, what region? So many questions! Fear not, Tea Mood is here to help. Make a post about what type of tea you would like and other users will help you find what you need.
     </p>
   </div>
   <div class="col-4">
@@ -11,7 +11,7 @@
 <% teas.forEach((tea) => { %>
   <div class="col-md-4">
 
-      <img class="img-thumbnail" src="<%= tea.image %>" alt="<%= tea.teatype %>">
+      <img class="img-thumbnail btn-outline-dark" src="<%= tea.image %>" alt="<%= tea.teatype %>">
       <a href="/teas/<%= tea.id %>"> <h2><%= tea.teatype %></h2> </a>
       <p>
         <%= tea.region %><br>

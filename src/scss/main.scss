@@ -48,6 +48,7 @@ div.login-image{
 img {
   height:auto;
   max-width: 100%;
+   border-radius: 25px;
 }
 
 body {
@@ -62,9 +63,13 @@ body {
       background-color: rgba(0, 0, 0, 0.5);
       padding: 30px;
       color: white;
+      box-shadow: 0 0 10px rgba(7,0,154,0.8);
       button {
         width: 100%;
+        background-color: rgb(251, 219, 33);
+        outline-color: rgb(251, 219, 33);
       }
+
     }
   }
 }
@@ -72,4 +77,101 @@ body {
 .background-form-register{
 background-color: 0, 0, 0, 0.8,
 
+
+}
+
+body.register{
+  form{
+      margin-top: -15px;
+  }
+}
+
+body.login{
+  form{
+      margin-top: 100px;
+  }
+}
+body{
+  &.teas{
+      background-image: url(../images/misterytea.jpg);
+      background-position: center top;
+      background-image: 100%;
+      background-size: cover;
+      .navbar-light .navbar-nav .nav-link {
+        color: white;
+  }form {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 30px;
+    color: white;
+    margin-top: 150px;
+    box-shadow: 0 0 10px rgba(7,0,154,0.8);
+
+
+    button {
+      width: 100%;
+      background-color: rgb(251, 219, 33);
+      outline-color: rgb(251, 219, 33);
+    }
+    div.blackbox{
+      background-color: black;
+    }
+  }
+}
+}
+
+body{
+  &.post{
+      background-image: url(../images/teaside.jpeg);
+      background-position: center top;
+      background-image: 100%;
+      background-size: cover;
+      .navbar-light .navbar-nav .nav-link {
+        color: white;
+        text-align:right;
+
+  }img{
+    align-items: flex-end;
+    width:500px;
+    float:left;
+    margin: 25px;
+  } p{
+margin: 25px;
+color: rgb(251, 219, 33);
+font-weight: bold;
+font-size: 20px;
+
+  }
+}
+}
+
+body{
+  &.index{
+      background-image: url(../images/ink.jpg);
+      background-position: center top;
+      background-image: 50%;
+      background-size: cover;
+      .navbar-light .navbar-nav .nav-link {
+        color: white;
+        text-align:right;
+
+  }p{
+margin: 25px;
+color: white;
+font-weight: bold;
+font-size: 20px;
+
+  }h2{
+    margin-left: 15px;
+    margin-top: 20px;
+  }div.col-md-4{
+    background-color:rgba(0, 0, 0, 0.5);
+  }div{
+    .col-4{
+      background-color:rgba(0, 0, 0, 0.5);
+
+    }div.col-8{
+      background-color:rgba(0, 0, 0, 0.5);
+    }
+  }
+}
 }
