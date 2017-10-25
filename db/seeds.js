@@ -68,7 +68,7 @@ User
         description: 'I heard that kukicha is known for its high content in minerals and vitamins so where can I get it?',
         teaquality: 'Organic',
         mood: 'Energize',
-        image: 'images/kukicha.jpeg',
+        image: '../images/kukicha.jpeg',
         createdBy: users[2]
 
       },{

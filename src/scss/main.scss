@@ -1,14 +1,8 @@
 
-* {
-  font-family: 'Abril Fatface', cursive;
-  font-family: 'Libre Baskerville', serif;
-}
-
-
 body {
   text-decoration: none;
   // margin: 25px;
-  color: white;
+  color: #F0E5CE;
 }
 
 ul {
@@ -23,7 +17,7 @@ div.navstyle{
 
 nav{
   background-color: rgba(0, 0, 0, 0.5);
-  color: white;
+  color: #F0E5CE;
   margin-bottom: 30px;
 }
 
@@ -31,6 +25,8 @@ nav{
 a.nav-link{
   text-align: center;
   margin:5px  70px 5px 70px;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.2em;
 
 }
 div.login-image{
@@ -61,17 +57,24 @@ body {
     background-position: center top;
     background-size: cover;
     .navbar-light .navbar-nav .nav-link {
-      color: white;
+      color:#F0E5CE;
     }
     form {
       background-color: rgba(0, 0, 0, 0.5);
       padding: 30px;
-      color: white;
+      color: #F0E5CE;
       box-shadow: 0 0 10px rgba(7,0,154,0.8);
       button {
         width: 100%;
         background-color: rgb(251, 219, 33);
         outline-color: rgb(251, 219, 33);
+        font-family: 'Quicksand', sans-serif;
+      }label{
+        font-family: 'Quicksand', sans-serif;
+      }input#password.form-control{
+      font-family: 'Nunito', sans-serif;
+    }input#email.form-control{
+      font-family: 'Nunito', sans-serif;
       }
 
     }
@@ -102,7 +105,7 @@ body{
       background-image: 100%;
       background-size: cover;
       .navbar-light .navbar-nav .nav-link {
-        color: white;
+        color: #F0E5CE;
   }form {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 30px;
@@ -118,6 +121,7 @@ body{
     }
     div.blackbox{
       background-color: black;
+
     }
   }
 }
@@ -129,70 +133,135 @@ body{
       background-position: center top;
       background-image: 100%;
       background-size: cover;
+      font-family: 'Nunito', sans-serif;
       .navbar-light .navbar-nav .nav-link {
-        color: white;
-        text-align:right;
-
+        color: #F0E5CE;
+        // text-align:right;
   }img{
     align-items: flex-end;
     width:500px;
     float:left;
     margin: 25px;
   } p{
-margin: 25px;
-color: rgb(251, 219, 33);
+margin: 10px 25px;
+padding-top: 24px;
+color: #F0E5CE;
 font-weight: bold;
-font-size: 20px;
+font-size: 1em;
+font-family: 'Nunito', sans-serif;
 
-  }
+  }h4{
+    padding: 25px;
+    font-weight: bold;
+    color: #3000A3;
+    // padding-left: 550px;
+  // }div.blackbox{
+  //     background-color:rgba(0, 0, 0, 0.8);
+  //     height: 600px;
+  //     width:600px;
+  //     border-radius: 25px;
+  // }
+}div.row{
+        background-color:rgba(0, 0, 0, 0.8);
+        border-radius: 25px;
+        padding-bottom: 50px;
+}div.eachcoment{
+  display:block;
+  margin:30px;
+width:100%;
+}textarea{
+  width: 500px;
+  border-radius: 15px;
+  height:200px;
+  box-shadow: 0 0 10px rgba(7,0,154,0.8);
+  color: #F0E5CE;
+}button{
+  border-radius: 5px;
+  background-color: rgb(251, 219, 33);
+    border-color: #3000A3;
+
+}button.btn-block{
+  width: 90%;
+  position: relative;
+  margin-left: 28px;
+}textarea#content{
+  position: relative;
+    margin-left: 28px;
+}
 }
 }
 
 body{
   &.index {
     background-image: url(../images/ink.jpg);
+    background-image: linear-gradient(#ffff, #ffff, 0.8);
     background-position: center top;
     background-image: 50%;
     background-size: cover;
     .navbar-light .navbar-nav .nav-link {
-      color: white;
+      color: #F0E5CE;
       text-align:right;
     }
     p {
       margin: 25px;
-      color: white;
+      color: #F0E5CE;
       font-weight: bold;
       font-size: 20px;
+      font-family: 'Nunito', sans-serif;
+      font-weight: lighter;
+      font-size: 1em;
     }
     h1 {
-    color:white;
+    color:#F0E5CE;
     margin-top: 12px;
+    font-family: 'Quicksand', sans-serif;
+    text-transform: uppercase;
+    font-size: 2em;
     }
     h2 {
       margin-left: 0px;
       margin-top: 20px;
+      font-family: 'Quicksand', sans-serif;
+      color:#3000A3;
     }
     .col-md-4 {
-      background-color:rgba(0, 0, 0, 0.8);
+      background-color:rgba(0, 0, 0, 0.4);
     }
     div {
       .col-4 {
-        background-color:rgba(0, 0, 0, 0.8);
+        background-color:rgba(0, 0, 0, 0.4);
       }
       div.col-8 {
-        background-color:rgba(0, 0, 0, 0.8);
+        background-color:rgba(0, 0, 0, 0.4);
       }
       p {
         margin:15px 5px 15px 0;
       }
       a.btn.btn-primary{
         margin-left: 100px;
-        margin-top: 100px;
+        margin-top: 50px;
         width: 200px;
+        background-color: rgb(251, 219, 33);
+        border-color: #3000A3;
+        font-family: 'Quicksand', sans-serif;
       }
     }
-    img.img-thumbnail.btn-outline-dark:last-child {
-      background-color: #ff0000;
-    }
+    // img.img-thumbnail.btn-outline-dark:last-child {
+    //   background-color: #ff0000;
+    // }
   }
+}
+body{
+  &.new {
+    background-image: url(../images/ink.jpg);
+    background-image: linear-gradient(#ffff, #ffff, 0.8);
+    background-position: center top;
+    background-image: 50%;
+    background-size: cover;
+
+  }  .navbar-light .navbar-nav .nav-link {
+      color: #F0E5CE;
+      text-align:right;
+    }
+
 }
